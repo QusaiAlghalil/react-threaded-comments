@@ -6,6 +6,11 @@
     "build": "pnpm --filter ./packages/react-comments build",
     "test": "pnpm --filter ./packages/react-comments test",
     "lint": "pnpm --filter ./packages/react-comments lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "typecheck": "pnpm --filter ./packages/react-comments typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
   }
 }
