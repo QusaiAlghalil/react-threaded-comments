@@ -1,0 +1,11 @@
+{
+  "name": "react-comments-monorepo",
+  "private": true,
+  "packageManager": "pnpm@12.4.2",
+  "scripts": {
+    "build": "pnpm --filter ./packages/react-comments build",
+    "test": "pnpm --filter ./packages/react-comments test",
+    "lint": "pnpm --filter ./packages/react-comments lint",
+    "typecheck": "pnpm --filter ./packages/react-comments typecheck"
+  }
+}
