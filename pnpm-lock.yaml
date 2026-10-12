@@ -170,6 +170,34 @@ importers:
         specifier: ^3.9.9
         version: 3.9.9
 
+  apps/demo:
+    dependencies:
+      react:
+        specifier: ^19.3.0
+        version: 19.3.0
+      react-dom:
+        specifier: ^19.3.0
+        version: 19.3.0(react@19.3.0)
+      react-threaded-comments:
+        specifier: workspace:*
+        version: link:../../packages/react-comments
+    devDependencies:
+      '@types/react':
+        specifier: ^19.3.0
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
+      '@vitejs/plugin-react':
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.3(esbuild@0.27.7))
+      typescript:
+        specifier: ~5.9.3
+        version: 5.9.3
+      vite:
+        specifier: ^8.3.3
+        version: 8.3.3(esbuild@0.27.7)
+
   packages/react-comments:
     devDependencies:
       '@eslint/js':
@@ -210,7 +238,7 @@ importers:
         version: 8.71.0(eslint@10.12.0)(typescript@5.9.3)
       vitest:
         specifier: ^5.0.3
-        version: 5.0.3(vite@8.3.2(esbuild@0.27.7))
+        version: 5.0.3(vite@8.3.3(esbuild@0.27.7))
 
 packages:
 
@@ -855,6 +883,22 @@ packages:
   '@typescript-eslint/visitor-keys@8.71.0':
     resolution: {integrity: sha512-8eQ9R218XORK+KLosnf4bu/QsUXvUyVwTbArg7/0NMB1Pu87OJKvj4nhFblkYE8gQV73mW1dx1ptlPCkwRGa7A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@vitejs/plugin-react@6.1.2':
+    resolution: {integrity: sha512-fhJNGUdscQa4HkI0xFxwonWyhnVReCPDbXI7FH7jmzpnVCrFQI7PRrhWecO263610vOrs9tr2Y4xcf8uAdFxbw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@rolldown/plugin-babel': ^0.1.7 || ^0.2.0
+      babel-plugin-react-compiler: ^1.0.0
+      oxc-transform-react: ^0.152.0
+      vite: ^8.0.0
+    peerDependenciesMeta:
+      '@rolldown/plugin-babel':
+        optional: true
+      babel-plugin-react-compiler:
+        optional: true
+      oxc-transform-react:
+        optional: true
 
   '@vitest/mocker@5.0.3':
     resolution: {integrity: sha512-T8sWAIbkSyAjkwTcaEc3Iu0o9A27X1/kdXrizhZkGuSKScRQtRzclfAMpOTcGdXCsqxeWlpGy3XjqaW8CpLORg==}
@@ -1521,8 +1565,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite@8.3.2:
-    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
+  vite@8.3.3:
+    resolution: {integrity: sha512-cTAldKPImjg6c+gk48U19POPn3GCBzZwpdsN8ZMEEcbpes+6/wvfqUd0C2y3qYY4wsj8PwgFwrZ/1jBPVttMSg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2143,14 +2187,19 @@ snapshots:
       '@typescript-eslint/types': 8.71.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitest/mocker@5.0.3(vite@8.3.2(esbuild@0.27.7))':
+  '@vitejs/plugin-react@6.1.2(vite@8.3.3(esbuild@0.27.7))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.1
+      vite: 8.3.3(esbuild@0.27.7)
+
+  '@vitest/mocker@5.0.3(vite@8.3.3(esbuild@0.27.7))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.0.3
       estree-walker: 3.0.3
       magic-string: 1.4.3
     optionalDependencies:
-      vite: 8.3.2(esbuild@0.27.7)
+      vite: 8.3.3(esbuild@0.27.7)
 
   '@vitest/spy@5.0.3': {}
 
@@ -2782,7 +2831,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@8.3.2(esbuild@0.27.7):
+  vite@8.3.3(esbuild@0.27.7):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -2793,10 +2842,10 @@ snapshots:
       esbuild: 0.27.7
       fsevents: 2.3.3
 
-  vitest@5.0.3(vite@8.3.2(esbuild@0.27.7)):
+  vitest@5.0.3(vite@8.3.3(esbuild@0.27.7)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.0.3(vite@8.3.2(esbuild@0.27.7))
+      '@vitest/mocker': 5.0.3(vite@8.3.3(esbuild@0.27.7))
       chai: 6.3.0
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -2807,7 +2856,7 @@ snapshots:
       tinybench: 6.2.0
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      vite: 8.3.2(esbuild@0.27.7)
+      vite: 8.3.3(esbuild@0.27.7)
       why-is-node-running: 3.2.1
     transitivePeerDependencies:
       - msw
