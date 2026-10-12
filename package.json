@@ -4,6 +4,8 @@
   "packageManager": "pnpm@12.4.2",
   "scripts": {
     "build": "pnpm --filter ./packages/react-comments build",
+    "predev": "pnpm build",
+    "dev": "pnpm -r --parallel dev",
     "test": "pnpm --filter ./packages/react-comments test",
     "lint": "pnpm --filter ./packages/react-comments lint",
     "format": "prettier --write .",
