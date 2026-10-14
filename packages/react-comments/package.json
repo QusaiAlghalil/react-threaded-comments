@@ -3,6 +3,24 @@
   "version": "0.0.1",
   "description": "A Facebook-style threaded comment section for React with replies, reactions and optimistic updates.",
   "license": "MIT",
+  "author": "Qusai Alghalil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QusaiAlghalil/react-threaded-comments.git",
+    "directory": "packages/react-comments"
+  },
+  "homepage": "https://github.com/QusaiAlghalil/react-threaded-comments#readme",
+  "bugs": {
+    "url": "https://github.com/QusaiAlghalil/react-threaded-comments/issues"
+  },
+  "keywords": [
+    "react",
+    "comments",
+    "threaded-comments",
+    "replies",
+    "reactions",
+    "headless"
+  ],
   "type": "module",
   "sideEffects": [
     "*.css"
@@ -28,6 +46,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "prepublishOnly": "pnpm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
